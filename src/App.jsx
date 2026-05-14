@@ -1,17 +1,25 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-import GasStationPOSMockup from './gas_station_posmockup'
+import "./styles/pos.css";
+import PumpRow from "./components/PumpRow";
+import LeftPanel from "./components/LeftPanel";
+import CenterPanel from "./components/CenterPanel";
+import BottomBar from "./components/BottomBar";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <GasStationPOSMockup />
-    </>
-  )
+    <div className="pos-container">
+      <PumpRow />
+      <div className="grid grid-cols-3">
+        <div className="col-span-1" ><LeftPanel/>
+      </div>
+        
+        <div className="col-span-2">
+          <CenterPanel />
+        </div>
+        
+      </div>
+      <BottomBar />
+    </div>
+  );
 }
 
-export default App
+export default App;

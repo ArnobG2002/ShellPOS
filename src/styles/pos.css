@@ -3,10 +3,42 @@ body {
   font-family: Tahoma, Arial, sans-serif;
   background: #0b2a8a;
 }
+.payment-column {
+  width: 100%;
+  position: relative;
+  right: 20px;
+  top: 40px;
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+}
+.pay-tall {
+  position: relative;
+  height: 7rem;
+  border: 3px outset;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  padding-left: 5%;
+}
+
+.pay-tall .corner-icon {
+  position: absolute;
+  bottom: 6px;
+  left: 6px;
+}
+
+.pay-tall.green { background: #043f2a; }
+.pay-tall.blue { background: #3f6fd9; }
+.pay-tall.purple { background: #7b5cd6; }
+.pay-tall.gray { background: #777; }
+
 
 .pos-container {
   width: 1280px;
-  height: 800px;
+  height: 45rem;
   margin: 0 auto;
   background: linear-gradient(135deg, #183aa8 0%, #0a2a86 60%);
   box-shadow: inset 0 0 40px rgba(0,0,0,0.5);
@@ -16,7 +48,6 @@ body {
 
 /* Top Pump Row */
 .pump-row {
-  display: flex;
   padding: 15px;
   gap: 10px;
 }
@@ -29,11 +60,11 @@ body {
   box-shadow: inset 0 0 10px rgba(0,0,0,0.5);
   text-align: center;
   font-size: 14px;
-  padding-top: 60px;
+  padding: 5%;
 }
 
 .stop-all {
-  width: 120px;
+  width: 5rem;
   height: 120px;
   background: #c9332b;
   border: 3px solid #fff;
@@ -55,41 +86,59 @@ body {
 }
 
 .transaction-box {
-  height: 300px;
+  width: 100%;
+  height: 15rem;
   background: #e5e5e5;
   border: 3px inset #999;
 }
 
 .left-button {
-  height: 50px;
+  height: 4rem;
+  width: 5rem;
   background: #4aa85c;
   margin-top: 8px;
   border: 2px outset #2f7f3f;
   text-align: center;
-  line-height: 50px;
+  line-height: 1.5rem;
   font-weight: bold;
   color: #fff;
 }
 
 /* Center */
 .center-panel {
-  flex: 1;
-  display: flex;
-  flex-wrap: wrap;
   gap: 20px;
 }
-
+.stop-button {
+  height: 5rem;
+  background: #dd3333;
+  border: 3px outset red;
+  text-align: center;
+  line-height: 2rem;
+  font-size: 1.4rem;
+  color: white;
+}
+.pay-button {
+  height: 5rem;
+  background: #6c87b5;
+  border: 3px outset #9fb3da;
+  text-align: center;
+  line-height: 2rem;
+  font-size: 2rem;
+  color: black;
+}
 .big-button {
-  width: 200px;
-  height: 120px;
+  height: 6rem;
   background: #29c94d;
   border: 3px outset #1a8f34;
   text-align: center;
-  line-height: 120px;
-  font-weight: bold;
+  line-height: 2rem;
+  font-size: 1.6rem;
   color: white;
 }
-
+.big-button.dark-green {
+  background: #1f8e3a; /* darker than other greens */
+  border-color: #16652a;
+}
 .yellow-button {
   background: #e7d067;
   border: 3px outset #b8a245;
@@ -98,9 +147,7 @@ body {
 
 /* Bottom */
 .bottom-bar {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
+  
   height: 60px;
   background: #c99c45;
   color: black;
